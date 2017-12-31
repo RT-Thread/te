@@ -1,0 +1,20 @@
+language: python
+
+notifications:
+  email: false
+
+before_script:
+# travis has changed to 64-bit and we require 32-bit compatibility libraries
+  - sudo apt-get update
+  - sudo apt-get install qemu-system-arm
+  - git clone https://github.com/RT-Thread/rt-thread.git
+  - "sudo apt-get -qq install gcc-multilib libc6:i386 libgcc1:i386 gcc-4.6-base:i386 libstdc++5:i386 libstdc++6:i386 libsdl-dev || true"
+  - "[ $RTT_TOOL_CHAIN = 'sourcery-arm' ] && curl -s https://launchpadlibrarian.net/287101520/gcc-arm-none-eabi-5_4-2016q3-20160926-linux.tar.bz2 | sudo tar xjf - -C /opt && export RTT_EXEC_PATH=/opt/gcc-arm-none-eabi-5_4-2016q3/bin && /opt/gcc-arm-none-eabi-5_4-2016q3/bin/arm-none-eabi-gcc --version || true"
+
+script:
+  - pip install pexpect
+  - sh ./build.sh
+  - ./run.py
+
+env:
+  - RTT_BSP='qemu-vexpress-a9' RTT_TOOL_CHAIN='sourcery-arm'

@@ -1,0 +1,1 @@
+qemu-system-arm -M vexpress-a9 -kernel rt-thread/bsp/qemu-vexpress-a9/rtthread.elf -nographic -sd sd.bin

@@ -1,0 +1,65 @@
+WARNING: Image format was not specified for 'sd.bin' and probing guessed raw.
+         Automatically detecting the format is dangerous for raw images, write operations on block 0 will be restricted.
+         Specify the 'raw' format explicitly to remove the restrictions.
+pulseaudio: pa_context_connect() failed
+pulseaudio: Reason: Connection refused
+pulseaudio: Failed to initialize PA contextaudio: Could not init `pa' audio driver
+ALSA lib confmisc.c:768:(parse_card) cannot find card '0'
+ALSA lib conf.c:4292:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:4292:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1251:(snd_func_refer) error evaluating name
+ALSA lib conf.c:4292:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:4771:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2266:(snd_pcm_open_noupdate) Unknown PCM default
+alsa: Could not initialize DAC
+alsa: Failed to open `default':
+alsa: Reason: No such file or directory
+ALSA lib confmisc.c:768:(parse_card) cannot find card '0'
+ALSA lib conf.c:4292:(_snd_config_evaluate) function snd_func_card_driver returned error: No such file or directory
+ALSA lib confmisc.c:392:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:4292:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1251:(snd_func_refer) error evaluating name
+ALSA lib conf.c:4292:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:4771:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2266:(snd_pcm_open_noupdate) Unknown PCM default
+alsa: Could not initialize DAC
+alsa: Failed to open `default':
+alsa: Reason: No such file or directory
+audio: Failed to create voice `lm4549.out'
+
+ \ | /
+- RT -     Thread Operating System
+ / | \     3.0.2 build Dec 29 2017
+ 2006 - 2017 Copyright by rt-thread team
+lwIP-2.0.2 initialized!
+SD card capacity 65536 KB
+probe mmcsd block device!
+found part[0], begin: 32256, size: 63.992MB
+file system initialization done!
+hello rt-thread
+msh />
+msh />
+msh />ls /
+Directory /:
+TEST                <DIR>                    
+msh />ls
+Directory /:
+TEST                <DIR>                    
+msh />ls /test
+Directory /test:
+msh />rm /test
+msh />mkdir /test
+msh />ls /test
+Directory /test:
+msh />ex1
+testsuite example
+msh />ps
+thread   pri  status      sp     stack size max used left tick  error
+-------- ---  ------- ---------- ----------  ------  ---------- ---
+tshell    20  ready   0x00000180 0x00001000    25%   0x00000005 000
+mmcsd_de  22  suspend 0x000000b0 0x00000400    50%   0x00000012 000
+tcpip     10  suspend 0x000000e8 0x00000400    61%   0x00000012 000
+etx       12  suspend 0x000000a8 0x00000400    16%   0x0000000f 000
+erx       12  suspend 0x000000b0 0x00000400    57%   0x0000000f 000
+tidle     31  ready   0x00000054
